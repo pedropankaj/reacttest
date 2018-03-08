@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
-    "build": "webpack -d && copy src\\index.html dist\\index.html && webpack-dev-server --content-base src/ --inline --hot",
-    "build:prod": "webpack -p && copy src/index.html dist/index.html"
+    "start": "node init && npm run build",
+    "build": "node init && webpack -d && copy src\\index.html dist\\index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "node init && webpack -p && copy src/index.html dist/index.html"
   },
   "author": "",
   "license": "ISC",
